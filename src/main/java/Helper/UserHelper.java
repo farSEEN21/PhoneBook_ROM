@@ -10,7 +10,7 @@ public interface UserHelper {
     String PSW = "DJS@sda1";
 
     default void fillform(MobileElement some, String str) {
-        some.click();
+      //  some.click();
         some.clear();
         some.sendKeys(str);
 

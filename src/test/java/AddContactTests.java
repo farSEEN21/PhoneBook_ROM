@@ -30,6 +30,7 @@ public class AddContactTests extends AppiumConfig implements UserHelper {
         new AddNewContactScreen(driver).lastname();
         new AddNewContactScreen(driver).email();
         new AddNewContactScreen(driver).Phone();
+
         new AddNewContactScreen(driver).adress();
         new AddNewContactScreen(driver).click();
         method.pause(5000);
