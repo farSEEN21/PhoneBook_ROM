@@ -2,6 +2,7 @@ import Helper.Contact;
 import Helper.UserHelper;
 import config.AppiumConfig;
 import org.openqa.selenium.interactions.SendKeysAction;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import screens.AddNewContactScreen;
@@ -33,6 +34,9 @@ public class AddContactTests extends AppiumConfig implements UserHelper {
 
         new AddNewContactScreen(driver).adress();
         new AddNewContactScreen(driver).click();
+      String textcont=  new ContactScreen(driver).textCont();
+      String str="Contact list";
+        Assert.assertEquals(textcont,str.trim().toUpperCase());
         method.pause(5000);
     }
 }

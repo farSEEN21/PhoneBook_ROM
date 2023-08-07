@@ -36,7 +36,7 @@ public class AddNewContactScreen extends BaseScreen implements UserHelper {
     MobileElement email;
 
     public void email() {
-        UserHelper.super.fillform(email, "sdfd f" + i + "@dfsdf.ru");
+        UserHelper.super.fillform(email, "sdfdf" + i + "@dfsdf.ru");
     }
 
     @FindBy

@@ -20,5 +20,9 @@ public class ContactScreen extends BaseScreen implements UserHelper {
 
 
     }
-
+@FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/action_bar']/android.widget.TextView")
+    MobileElement textContList;
+    public String textCont(){
+        return textContList.getText().toUpperCase().trim();
+    }
 }
