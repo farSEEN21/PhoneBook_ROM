@@ -1,7 +1,7 @@
 package screens;
 
-import Helper.Contact;
-import Helper.UserHelper;
+import helper.Contact;
+import helper.UserHelper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.support.FindBy;
@@ -67,4 +67,19 @@ public class AddNewContactScreen extends BaseScreen implements UserHelper {
         UserHelper.super.click(createbtn);
     }
 
+    public AddNewContactScreen fillContactForm(Contact contact) {
+        wait(createbtn, 5);
+        type(name, contact.getName());
+        type(lastname, contact.getLastName());
+        type(Phone, contact.getPhone());
+        type(email, contact.getEmail1());
+        type(adress, contact.getAddress());
+        return this;
+    }
+
+    public ContactScreen submitConatact() {
+        createbtn.click();
+        return new ContactScreen(driver);
+
+    }
 }

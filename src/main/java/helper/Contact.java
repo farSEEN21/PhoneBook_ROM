@@ -1,4 +1,4 @@
-package Helper;
+package helper;
 
 import lombok.Builder;
 import lombok.Getter;

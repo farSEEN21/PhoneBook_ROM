@@ -1,8 +1,6 @@
-package Helper;
+package helper;
 
 import config.AppiumConfig;
-import lombok.Builder;
-import org.testng.annotations.Test;
 
 public class HelperMethods extends AppiumConfig {
 
