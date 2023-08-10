@@ -35,8 +35,8 @@ public class RgistrationTests extends AppiumConfig implements UserHelper {
                         .fillEmail("dfg_"+i+"fgkfdjg.ru")
                         .fillPsw(PSW)
                         .submitRegNeg().isAllert());
-
-
+Assert.assertTrue(new LoginRegistrationScreen(driver).isAllert());
+ 
 
 
 
