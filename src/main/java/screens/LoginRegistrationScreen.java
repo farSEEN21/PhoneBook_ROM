@@ -77,6 +77,10 @@ public class LoginRegistrationScreen extends BaseScreen implements UserHelper {
     @FindBy(xpath = "//*[@resource-id='android:id/button1']")
     MobileElement OkBtnError;
 
+
+    @FindBy(xpath = "//*[@resource-id='android:id/message']")
+    MobileElement errortext;
+
     public boolean isAllert() {
         wait(alertTitle,5);
         String str=alertTitle.getText();
@@ -124,5 +128,12 @@ public class LoginRegistrationScreen extends BaseScreen implements UserHelper {
         return this;
 
     }
+public boolean isErrorMessageContainsText(String text){
+    //    return errortext.getText().contains(text);
+    return isErrorMessegeContainsText(text);
+}
+
+
+
 
 }

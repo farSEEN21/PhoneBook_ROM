@@ -28,23 +28,37 @@ public class RgistrationTests extends AppiumConfig implements UserHelper {
 
     }
    @Test
-    public void RegistrationTestNegWrongEmail(){
+    public void RegistrationTestNegWrongEmail() {
+
+       Assert.assertTrue(
+               new SplashScreen(driver).gotoLogin()
+                       .fillEmail("dfg_" + i + "fgkfdjg.ru")
+                       .fillPsw(PSW)
+                       .submitRegNeg().isAllert());
+       Assert.assertTrue(new LoginRegistrationScreen(driver).isAllert());
+
+   }
+   @Test
+    public void RegistrationTestNegWrongEmail1(){
 
         Assert.assertTrue(
                 new SplashScreen(driver).gotoLogin()
                         .fillEmail("dfg_"+i+"fgkfdjg.ru")
                         .fillPsw(PSW)
-                        .submitRegNeg().isAllert());
-Assert.assertTrue(new LoginRegistrationScreen(driver).isAllert());
- 
+                        .submitRegNeg()
+                        .isErrorMessageContainsText("{username=must be a well-formed email address}"));
+
+
+//Assert.assertTrue(new LoginRegistrationScreen(driver).isAllert());
+
 
 
 
     }
-    @AfterTest
-    public void postcond() {
-        if (new LoginRegistrationScreen(driver).isAllert()){
-           new LoginRegistrationScreen(driver).clickErrorOk();
-   }}
+//    @AfterTest
+//    public void postcond() {
+//        if (new LoginRegistrationScreen(driver).isAllert()){
+//           new LoginRegistrationScreen(driver).clickErrorOk();
+//   }}
 
 }

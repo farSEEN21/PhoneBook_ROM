@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e48801b8-6e2d-447d-bba1-3a732940ebbc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RgistrationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/screens/ViewContact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EditContactTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RemoveContactTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Helper/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Helper/HelperMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/HelperMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Helper/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/UserHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AddNewContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/AddNewContactScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/ContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ContactScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/LoginRegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/LoginRegistrationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/SplashScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RgistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RgistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +67,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.RgistrationTests.RegistrationTestNegWrongEmail">
-    <configuration name="AddContactTests.AddContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.EditContactTests.editOneCOntactPositive">
+    <configuration name="AddContactTests.AddCOntacHW" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -84,7 +81,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;AddContactTests.AddContact&quot;" />
+            <option value="&quot;AddContactTests.AddCOntacHW&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -95,7 +92,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.LoginPositive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EditContactTests.editOneCOntactPositive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -108,7 +105,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;LoginTest.LoginPositive&quot;" />
+            <option value="&quot;EditContactTests.editOneCOntactPositive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -119,7 +116,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RgistrationTests.RegistrationTestNegWrongEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RemoveContactTest.removeAllContactsposit" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -132,7 +129,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;RgistrationTests.RegistrationTestNegWrongEmail&quot;" />
+            <option value="&quot;RemoveContactTest.removeAllContactsposit&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -143,7 +140,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RgistrationTests.RegistrationTestPosit" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RemoveContactTest.removeOneContactPosit" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -156,7 +153,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;RgistrationTests.RegistrationTestPosit&quot;" />
+            <option value="&quot;RemoveContactTest.removeOneContactPosit&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -167,31 +164,37 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="HelperMethods.contactModel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="PhoneBook_ROM.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="helper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Helper" />
-      <option name="MAIN_CLASS_NAME" value="helper.HelperMethods" />
-      <option name="METHOD_NAME" value="contactModel" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="RgistrationTests.RegistrationTestNegWrongEmail1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RgistrationTests.RegistrationTestNegWrongEmail1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RgistrationTests.RegistrationTestNegWrongEmail" />
-        <item itemvalue="Gradle.RgistrationTests.RegistrationTestPosit" />
-        <item itemvalue="Gradle.LoginTest.LoginPositive" />
-        <item itemvalue="Gradle.AddContactTests.AddContact" />
-        <item itemvalue="TestNG.HelperMethods.contactModel" />
+        <item itemvalue="Gradle.EditContactTests.editOneCOntactPositive" />
+        <item itemvalue="Gradle.RemoveContactTest.removeOneContactPosit" />
+        <item itemvalue="Gradle.RemoveContactTest.removeAllContactsposit" />
+        <item itemvalue="Gradle.RgistrationTests.RegistrationTestNegWrongEmail1" />
+        <item itemvalue="Gradle.AddContactTests.AddCOntacHW" />
       </list>
     </recent_temporary>
   </component>

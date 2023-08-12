@@ -71,7 +71,7 @@ public class AddContactTests extends AppiumConfig implements UserHelper {
        new ContactScreen(driver)
                .openContactForm()
                .fillContactForm(user)
-               .submitConatact();
+               .submitConatact().isCOntactAdd(user);
      Assert.assertTrue(new ContactScreen(driver).isCorrect(user));
 
 //String ContactNameLastName=contactModel().getName()+" "+contactModel().getLastName();
