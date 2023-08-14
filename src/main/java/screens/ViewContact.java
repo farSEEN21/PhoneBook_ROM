@@ -41,7 +41,8 @@ public class ViewContact extends BaseScreen implements UserHelper {
     MobileElement adress;
 
     public Contact viewContOn(){
-        return Contact.builder()        .name(name.getText())
+        return Contact.builder()
+                .name(name.getText())
                 .lastName(lastname.getText())
                 .phone(Phone.getText())
                 .email1(email.getText())

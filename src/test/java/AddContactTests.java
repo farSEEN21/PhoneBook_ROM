@@ -25,7 +25,7 @@ public class AddContactTests extends AppiumConfig implements UserHelper {
 //    }
 
     public void precondition() {
-        new SplashScreen(driver).gotoLogin().fillEmail(NEWREGEMAIL).fillPsw(PSW).submitLogin();
+        new SplashScreen(driver).gotoLogin().fillEmail(EMAIL).fillPsw(PSW).submitLogin();
     }
 
     @Test
@@ -65,20 +65,40 @@ public class AddContactTests extends AppiumConfig implements UserHelper {
 
 
     }
-@Test
-    public void AddCOntacHW(){
-    Contact user= contactModel();
-       new ContactScreen(driver)
-               .openContactForm()
-               .fillContactForm(user)
-               .submitConatact().isCOntactAdd(user);
-     Assert.assertTrue(new ContactScreen(driver).isCorrect(user));
+
+    @Test
+    public void AddCOntacHW() {
+        Contact user = contactModel();
+        new ContactScreen(driver)
+                .openContactForm()
+                .fillContactForm(user)
+                .submitConatact().isCOntactAdd(user);
+        Assert.assertTrue(new ContactScreen(driver).isCorrect(user));
 
 //String ContactNameLastName=contactModel().getName()+" "+contactModel().getLastName();
 //String Contact=user.getPhone();
 
 
+    }
 
-}
+    @Test
+    public void AddCOntacLastOne() {
+        Contact user = contactModel();
+    Assert.assertTrue(    new ContactScreen(driver)  .openContactForm()
+                .fillContactForm(user)
+                .submitConatact().isLastContact(user));
+//
+//.scrolldown(0)
+//                .scrolldown( );
+     //  Assert.assertEquals(user, );
+       //if (new ContactScreen(driver).isCOntactAdd(user)==false){new ContactScreen(driver).scrolldown();}
 
+
+
+
+
+        // Assert.assertTrue(new ContactScreen(driver).isCorrect(user));
+
+
+    }
 }

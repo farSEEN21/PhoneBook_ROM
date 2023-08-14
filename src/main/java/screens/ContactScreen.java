@@ -77,7 +77,7 @@ public class ContactScreen extends BaseScreen implements UserHelper {
     }
 
     public AddNewContactScreen openContactForm() {
-        wait(addbtn, 5);
+        wait(addbtn, 9);
         addbtn.click();
         return new AddNewContactScreen(driver);
     }
@@ -108,6 +108,60 @@ public class ContactScreen extends BaseScreen implements UserHelper {
         }
     }
 
+    public ContactScreen scrolldown() {
+        wait(addbtn, 5);
+        int last = rowContainer.size() - 1;
+        MobileElement contact = rowContainer.get(last);
+        //   phoneNUmber=rowPhone.get(last).getText();
+        Rectangle position = contact.getRect();
+
+
+        int y = 500 + (position.getY() + position.getHeight()) / 4;
+
+        TouchAction<?> touchAction = new TouchAction<>(driver);
+        touchAction.longPress(PointOption.point(y, y))
+                .moveTo(PointOption.point(21, 0))
+                .release()
+                .perform();
+
+        pause(3000);
+
+
+        return this;
+    }
+
+    public boolean isCorrectlastContact(Contact user) {
+
+        int lastOne = rowContainer.size() - 1;
+        rowContainer.get(lastOne).click();
+        Contact usercheck = new ViewContact(driver).viewContOn();
+        if (user.getName().equals(usercheck.getName()) &&
+                user.getLastName().equals(usercheck.getLastName())
+                &&
+                user.getPhone().equals(usercheck.getPhone())
+                &&
+                user.getEmail1().equals(usercheck.getEmail1())
+                && user.getAddress().equals(usercheck.getAddress())) {
+            driver.navigate().back();
+            System.out.println("yes");
+            return true;
+        } else {
+            driver.navigate().back();
+
+            return false;
+        }
+
+
+    }
+
+    public boolean isLastContact(Contact user) {
+// boolean result = isCorrect(user);
+        boolean result = isCorrectlastContact(user);
+        while (!result == true) {
+            scrolldown();
+            result = isCorrectlastContact(user);
+        }return true;
+    }
 
     public boolean isCOntactAdd(Contact user) {
         boolean checkName = checkContainsText(rowName, user.getName() + " " + user.getLastName());
@@ -127,7 +181,7 @@ public class ContactScreen extends BaseScreen implements UserHelper {
     public ContactScreen removeOneContact() {
         wait(addbtn, 5);
         MobileElement contact = rowContainer.get(0);
-        phoneNUmber=rowPhone.get(0).getText();
+        phoneNUmber = rowPhone.get(0).getText();
         Rectangle rec = contact.getRect();
         int xStart = rec.getX() + rec.getWidth() / 8;
         int xEnd = xStart + rec.getWidth() * 6 / 8;
@@ -144,71 +198,92 @@ public class ContactScreen extends BaseScreen implements UserHelper {
     }
 
 
-    public boolean isContactRemove(){
-        boolean res= rowPhone.contains(phoneNUmber);
+    public boolean isContactRemove() {
+        boolean res = rowPhone.contains(phoneNUmber);
         return !res;
     }
-public ContactScreen removeallcontacts(){
-        wait(addbtn,5);
-        while (rowContainer.size()>0){
+
+    public ContactScreen removeallcontacts() {
+        wait(addbtn, 5);
+        while (rowContainer.size() > 0) {
             removeOneContact();
-        } return this;
+        }
+        return this;
 
-}
-public boolean isNoContactMessage(){
-        return shouldHave(emptytext,"No Contacts. Add One more!",5);
-}
-public ContactScreen provideContacts(){
-        while (rowContainer.size()<3){
+    }
+
+    public boolean isNoContactMessage() {
+        return shouldHave(emptytext, "No Contacts. Add One more!", 5);
+    }
+
+    public ContactScreen provideContacts() {
+        while (rowContainer.size() < 3) {
             addContact();
-        }return this;
-}
+        }
+        return this;
+    }
 
 
-public ContactScreen addContact(){
+    public ContactScreen addContact() {
 
-    int i = (int) (System.currentTimeMillis() / 1000) % 3600;
+        int i = (int) (System.currentTimeMillis() / 1000) % 3600;
 
 
-    Contact contact = Contact.builder()
-            .name("John_" + i)
-            .lastName("Snow")
-            .phone("01234578" + i)
-            .email1("john_" + i + "@mail.com")
-            .address("Rehovot")
-            .description("Best friend")
-            .build();
-    new ContactScreen(driver)
-            .openContactForm()
-            .fillContactForm(contact)
-            .submitConatact();
-    return this;
+        Contact contact = Contact.builder()
+                .name("John_" + i)
+                .lastName("Snow")
+                .phone("01234578" + i)
+                .email1("john_" + i + "@mail.com")
+                .address("Rehovot")
+                .description("Best friend")
+                .build();
+        new ContactScreen(driver)
+                .openContactForm()
+                .fillContactForm(contact)
+                .submitConatact();
+        return this;
 
-}
+    }
 
-public EditContactScreen editOneContact(){
-    wait(addbtn, 5);
-    MobileElement contact = rowContainer.get(0);
-     Rectangle rec = contact.getRect();
-    int xStart = rec.getX() + rec.getWidth() / 8;
-    int xEnd = xStart + rec.getWidth() * 6 / 8;
-    int y = rec.getY() + rec.getHeight() / 2;
 
-    TouchAction<?> touchAction = new TouchAction<>(driver);
-    touchAction.longPress(PointOption.point(xEnd, y))
-            .moveTo(PointOption.point(xStart, y))
-            .release()
-            .perform();
+    public EditContactScreen editOneContact() {
+        wait(addbtn, 5);
+        MobileElement contact = rowContainer.get(0);
+        Rectangle rec = contact.getRect();
+        int xStart = rec.getX() + rec.getWidth() / 8;
+        int xEnd = xStart + rec.getWidth() * 6 / 8;
+        int y = rec.getY() + rec.getHeight() / 2;
 
-    pause(3000);
-    return new EditContactScreen(driver) ;
-}
-public boolean isContactContains(String text){
+        TouchAction<?> touchAction = new TouchAction<>(driver);
+        touchAction.longPress(PointOption.point(xEnd, y))
+                .moveTo(PointOption.point(xStart, y))
+                .release()
+                .perform();
+
+        pause(3000);
+        return new EditContactScreen(driver);
+    }
+
+
+    public boolean isContactContains(String text) {
         rowContainer.get(0).click();
-Contact contact=  new ViewContact(driver).viewContOn();
-driver.navigate().back();
-return contact.toString().contains(text);
+        Contact contact = new ViewContact(driver).viewContOn();
+        driver.navigate().back();
+        return contact.toString().contains(text);
 
-}
+    }
+//
+//public ContactScreen checkthelast(){
+//
+//    getContactInformation();
+//
+//        isCorrect();
+//
+//
+//        isContactContains()
+//
+//}
+
+
 }
 

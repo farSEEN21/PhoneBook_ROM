@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e48801b8-6e2d-447d-bba1-3a732940ebbc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/ViewContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/EditContactTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RemoveContactTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ScrollToTheEndTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AddNewContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/AddNewContactScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/ContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ContactScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/LoginRegistrationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/LoginRegistrationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/ViewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ViewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RgistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RgistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +64,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.EditContactTests.editOneCOntactPositive">
-    <configuration name="AddContactTests.AddCOntacHW" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AddContactTests.AddCOntacLastOne">
+    <configuration name="AddContactTests.AddCOntacLastOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -81,7 +78,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;AddContactTests.AddCOntacHW&quot;" />
+            <option value="&quot;AddContactTests.AddCOntacLastOne&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddContactTests.AddCOntacLastOne" />
         <item itemvalue="Gradle.EditContactTests.editOneCOntactPositive" />
         <item itemvalue="Gradle.RemoveContactTest.removeOneContactPosit" />
         <item itemvalue="Gradle.RemoveContactTest.removeAllContactsposit" />
         <item itemvalue="Gradle.RgistrationTests.RegistrationTestNegWrongEmail1" />
-        <item itemvalue="Gradle.AddContactTests.AddCOntacHW" />
       </list>
     </recent_temporary>
   </component>

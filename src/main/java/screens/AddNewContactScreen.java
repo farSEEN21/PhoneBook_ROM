@@ -68,7 +68,7 @@ public class AddNewContactScreen extends BaseScreen implements UserHelper {
     }
 
     public AddNewContactScreen fillContactForm(Contact contact) {
-        wait(createbtn, 5);
+        wait(createbtn, 3);
         type(name, contact.getName());
         type(lastname, contact.getLastName());
         type(Phone, contact.getPhone());
