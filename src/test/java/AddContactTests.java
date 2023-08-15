@@ -84,17 +84,14 @@ public class AddContactTests extends AppiumConfig implements UserHelper {
     @Test
     public void AddCOntacLastOne() {
         Contact user = contactModel();
-    Assert.assertTrue(    new ContactScreen(driver)  .openContactForm()
+        Assert.assertTrue(new ContactScreen(driver).openContactForm()
                 .fillContactForm(user)
                 .submitConatact().isLastContact(user));
 //
 //.scrolldown(0)
 //                .scrolldown( );
-     //  Assert.assertEquals(user, );
-       //if (new ContactScreen(driver).isCOntactAdd(user)==false){new ContactScreen(driver).scrolldown();}
-
-
-
+        //  Assert.assertEquals(user, );
+        //if (new ContactScreen(driver).isCOntactAdd(user)==false){new ContactScreen(driver).scrolldown();}
 
 
         // Assert.assertTrue(new ContactScreen(driver).isCorrect(user));

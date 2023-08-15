@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e48801b8-6e2d-447d-bba1-3a732940ebbc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ScrollToTheEndTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AddNewContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/AddNewContactScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/ContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ContactScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/ViewContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ViewContact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddContactTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

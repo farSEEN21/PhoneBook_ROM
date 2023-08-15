@@ -8,6 +8,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -108,6 +109,35 @@ public class ContactScreen extends BaseScreen implements UserHelper {
         }
     }
 
+    public ContactScreen scrollList() {
+        wait(addbtn, 5);
+        MobileElement contact = rowContainer.get(rowContainer.size() - 1);
+        phoneNUmber = rowPhone.get(0).getText();
+        Rectangle rec = contact.getRect();
+        int xStart = rec.getX() + rec.getWidth() / 8;
+        int y = rec.getY() + rec.getHeight() / 2;
+
+        TouchAction<?> touchAction = new TouchAction<>(driver);
+        touchAction.longPress(PointOption.point(xStart, y))
+                .moveTo(PointOption.point(xStart, 0))
+                .release()
+                .perform();
+        return this;
+    }
+
+
+    public boolean isEndofList() {
+        String beforeScroll = rowName.get(rowName.size() - 1).getText() +
+                " " + rowPhone.get(rowPhone.size() - 1).getText();
+        scrolldown();
+        String afterscroll = rowName.get(rowName.size() - 1).getText() +
+                " " + rowPhone.get(rowPhone.size() - 1).getText();
+        if (beforeScroll.equals(afterscroll))
+            return true;
+        return false;
+    }
+
+
     public ContactScreen scrolldown() {
         wait(addbtn, 5);
         int last = rowContainer.size() - 1;
@@ -154,13 +184,25 @@ public class ContactScreen extends BaseScreen implements UserHelper {
 
     }
 
+    public boolean isContactAddScroll(Contact contact) {
+        boolean res = false;
+        while (!res) {
+            boolean checkName = checkContainsText(rowName, contact.getName() + " " + contact.getLastName());
+            boolean checkphone = checkContainsText(rowPhone, contact.getPhone());
+            res= checkName && checkphone;
+            if (res == false) isEndofList();
+        }
+        return res;
+    }
+
     public boolean isLastContact(Contact user) {
 // boolean result = isCorrect(user);
         boolean result = isCorrectlastContact(user);
         while (!result == true) {
             scrolldown();
             result = isCorrectlastContact(user);
-        }return true;
+        }
+        return true;
     }
 
     public boolean isCOntactAdd(Contact user) {
@@ -272,17 +314,6 @@ public class ContactScreen extends BaseScreen implements UserHelper {
         return contact.toString().contains(text);
 
     }
-//
-//public ContactScreen checkthelast(){
-//
-//    getContactInformation();
-//
-//        isCorrect();
-//
-//
-//        isContactContains()
-//
-//}
 
 
 }
